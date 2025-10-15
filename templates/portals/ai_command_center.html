@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Command Center Portal - Xibalba Mixed Media Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>AI Command Center Portal</h1>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('index') }}">Home</a>
+                <div class="user-menu">
+                    <img src="{{ user.picture }}" alt="Profile" class="profile-pic">
+                    <span>{{ user.name }}</span>
+                    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portal-content">
+            <div class="container">
+                <h2>Welcome to AI Command Center Portal</h2>
+                <p>AI management and coordination for {{ user.name }}</p>
+                
+                <div class="portal-grid">
+                    <div class="portal-card">
+                        <h3>AI Management</h3>
+                        <p>Manage AI systems and configurations</p>
+                        <a href="#" class="btn btn-primary">Manage AI</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Task Coordination</h3>
+                        <p>Coordinate AI tasks and workflows</p>
+                        <a href="#" class="btn btn-primary">Coordinate Tasks</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>System Monitoring</h3>
+                        <p>Monitor AI system performance and status</p>
+                        <a href="#" class="btn btn-primary">Monitor Systems</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Analytics Dashboard</h3>
+                        <p>View AI performance analytics and reports</p>
+                        <a href="#" class="btn btn-primary">View Analytics</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

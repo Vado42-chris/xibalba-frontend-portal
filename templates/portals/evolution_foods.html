@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolution Foods Portal - Xibalba Mixed Media Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Evolution Foods Portal</h1>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('index') }}">Home</a>
+                <div class="user-menu">
+                    <img src="{{ user.picture }}" alt="Profile" class="profile-pic">
+                    <span>{{ user.name }}</span>
+                    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portal-content">
+            <div class="container">
+                <h2>Welcome to Evolution Foods Portal</h2>
+                <p>B2B raw dog food distribution management for {{ user.name }}</p>
+                
+                <div class="portal-grid">
+                    <div class="portal-card">
+                        <h3>Product Catalog</h3>
+                        <p>Manage raw dog food products and inventory</p>
+                        <a href="#" class="btn btn-primary">View Catalog</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Order Management</h3>
+                        <p>Process and track B2B orders</p>
+                        <a href="#" class="btn btn-primary">Manage Orders</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Distribution Network</h3>
+                        <p>Manage distribution partners and logistics</p>
+                        <a href="#" class="btn btn-primary">View Network</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Analytics</h3>
+                        <p>View sales and distribution analytics</p>
+                        <a href="#" class="btn btn-primary">View Analytics</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

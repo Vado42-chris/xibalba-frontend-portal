@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeilRift Portal - Xibalba Mixed Media Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>VeilRift Portal</h1>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('index') }}">Home</a>
+                <div class="user-menu">
+                    <img src="{{ user.picture }}" alt="Profile" class="profile-pic">
+                    <span>{{ user.name }}</span>
+                    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portal-content">
+            <div class="container">
+                <h2>Welcome to VeilRift Portal</h2>
+                <p>Personal project and media production for {{ user.name }}</p>
+                
+                <div class="portal-grid">
+                    <div class="portal-card">
+                        <h3>World Bible</h3>
+                        <p>Access the complete VeilRift world bible</p>
+                        <a href="#" class="btn btn-primary">View World Bible</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Character Creation</h3>
+                        <p>Create and manage VeilRift characters</p>
+                        <a href="#" class="btn btn-primary">Create Character</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Campaign Management</h3>
+                        <p>Manage VeilRift campaigns and sessions</p>
+                        <a href="#" class="btn btn-primary">Manage Campaigns</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Media Production</h3>
+                        <p>Access media production tools and assets</p>
+                        <a href="#" class="btn btn-primary">Media Tools</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
