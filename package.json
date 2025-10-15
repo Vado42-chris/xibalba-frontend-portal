@@ -1,12 +1,12 @@
 {
   "name": "xibalba-frontend-portal",
   "version": "1.0.0",
-  "description": "Xibalba Mixed Media Studio - Front-end Portal with Client Login System",
-  "main": "index.html",
+  "description": "Xibalba Mixed Media Studio - Real Web Application with Google OAuth and Client Portals",
+  "main": "app.py",
   "scripts": {
-    "start": "python -m http.server 8000",
-    "dev": "python -m http.server 8000",
-    "build": "echo 'Static site - no build needed'",
+    "start": "python app.py",
+    "dev": "python app.py",
+    "build": "echo 'Python Flask app - no build needed'",
     "deploy": "echo 'Ready for deployment to Render.com'"
   },
   "keywords": [
@@ -14,14 +14,17 @@
     "mixed-media-studio",
     "client-portal",
     "google-oauth",
-    "white-label"
+    "white-label",
+    "flask",
+    "python",
+    "web-application"
   ],
   "author": "Master Chris Hallberg",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {},
   "engines": {
-    "node": ">=14.0.0"
+    "python": ">=3.8.0"
   },
   "repository": {
     "type": "git",

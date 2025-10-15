@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM Law Portal - Xibalba Mixed Media Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>SAM Law Portal</h1>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('index') }}">Home</a>
+                <div class="user-menu">
+                    <img src="{{ user.picture }}" alt="Profile" class="profile-pic">
+                    <span>{{ user.name }}</span>
+                    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portal-content">
+            <div class="container">
+                <h2>Welcome to SAM Law Portal</h2>
+                <p>Legal case management and services for {{ user.name }}</p>
+                
+                <div class="portal-grid">
+                    <div class="portal-card">
+                        <h3>Case Management</h3>
+                        <p>Manage your legal cases and documents</p>
+                        <a href="#" class="btn btn-primary">View Cases</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Document Upload</h3>
+                        <p>Upload and manage legal documents</p>
+                        <a href="#" class="btn btn-primary">Upload Documents</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Timeline</h3>
+                        <p>View case timeline and events</p>
+                        <a href="#" class="btn btn-primary">View Timeline</a>
+                    </div>
+                    
+                    <div class="portal-card">
+                        <h3>Notes</h3>
+                        <p>Add and manage case notes</p>
+                        <a href="#" class="btn btn-primary">Manage Notes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
