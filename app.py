@@ -240,7 +240,7 @@ def email_floater():
     
     return jsonify({'floaters': floaters})
 
-@google.tokengetter
+# @google.tokengetter  # Temporarily disabled for deployment
 def get_google_oauth_token():
     """Get Google OAuth token from session"""
     return session.get('google_token')
