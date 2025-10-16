@@ -1,14 +1,10 @@
 services:
   - type: web
     name: xibalba-frontend-portal
-    env: static
-    buildCommand: echo "Static site - no build needed"
-    startCommand: python -m http.server $PORT
-    envVars:
-      - key: PORT
-        value: 8000
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
     healthCheckPath: /
     autoDeploy: true
     branch: main
     rootDir: .
-    staticPublishPath: .
